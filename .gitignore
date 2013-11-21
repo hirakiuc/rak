@@ -4,3 +4,4 @@ tags
 .DS_store
 *.gem
 Gemfile.lock
+.bundle
