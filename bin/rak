@@ -89,6 +89,7 @@ END
     :smalltalk     => %w( .st ),
     :sml           => %w( .sml .cm .sig ),
     :sql           => %w( .ctl .sql ),
+    :swp           => %w( .swp ),
     :tcl           => %w( .itcl .itk .tcl ),
     :tex           => %w( .cls .sty .tex ),
     :text          => %w( .text .txt README ),
@@ -299,6 +300,7 @@ END
           opt[:colour] = true
         when '-a'
           opt[:all_files] = true
+          opt[:excludes] << 'swp'
         when '--type'
           if arg[0..1] == "no"
             type = arg[2..-1]
