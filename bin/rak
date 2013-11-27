@@ -123,6 +123,9 @@ END
     opt[:includes] = []
     opt[:excludes] = []
 
+    # always excludes .swp
+    opt[:excludes] << 'swp'
+
     FILE_TYPES.each do |type, exts|
       if ARGV.delete('--'+type.to_s)
         exts.each do |ext|
@@ -300,7 +303,6 @@ END
           opt[:colour] = true
         when '-a'
           opt[:all_files] = true
-          opt[:excludes] << 'swp'
         when '--type'
           if arg[0..1] == "no"
             type = arg[2..-1]
